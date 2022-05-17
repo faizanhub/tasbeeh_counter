@@ -1,16 +1,11 @@
 # tasbeeh_counter
 
-A new Flutter project.
+A tasbeeh counter application.
 
-## Getting Started
+## App Screenshots:
 
-This project is a starting point for a Flutter application.
+![WhatsApp Image 2022-05-17 at 4 53 32 PM](https://user-images.githubusercontent.com/38282882/168805025-5bd10f9a-b801-4f57-bd93-dd9fd24a502b.jpeg)
 
-A few resources to get you started if this is your first Flutter project:
+![WhatsApp Image 2022-05-17 at 4 53 33 PM](https://user-images.githubusercontent.com/38282882/168805038-77b88581-f440-4c56-a78b-6de144a6f4f0.jpeg)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![WhatsApp Image 2022-05-17 at 4 53 34 PM](https://user-images.githubusercontent.com/38282882/168805049-2ea58fe7-a7da-45d4-8d75-c727d7c1b65f.jpeg)

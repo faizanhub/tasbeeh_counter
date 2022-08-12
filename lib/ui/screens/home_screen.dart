@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:tasbeeh_counter/core/constants/configs.dart';
 import 'package:tasbeeh_counter/core/constants/text_styles.dart';
 import 'package:tasbeeh_counter/ui/widgets/my_drawer.dart';
 
@@ -47,10 +48,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget checkForAd() {
     if (isLoaded == true) {
       return Container(
-        child: AdWidget(ad: myBanner),
         width: double.infinity,
         height: myBanner.size.height.toDouble(),
         alignment: Alignment.center,
+        child: AdWidget(ad: myBanner),
       );
     }
     return Container();
@@ -63,9 +64,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
     ///ad mob banner
     myBanner = BannerAd(
-      adUnitId: 'ca-app-pub-6310818981150228/7256737636',
+      adUnitId: AppConfigs.adUnitId,
       size: AdSize.banner,
-      request: AdRequest(),
+      request: const AdRequest(),
       listener: BannerAdListener(
         onAdLoaded: (_) {
           setState(() {
@@ -85,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xffeeeeee),
+        backgroundColor: const Color(0xffeeeeee),
         appBar: AppBar(
           title: const Text('Counter'),
           // actions: <Widget>[
@@ -97,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
           //       )),
           // ],
         ),
-        drawer: MyDrawer(),
+        drawer: const MyDrawer(),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -111,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 '$_counter',
                 style: counterTextStyle,
               ),
-              Spacer(),
+              const Spacer(),
 
               ///  Button 1 & 2 here
               Row(
@@ -126,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Container(
                             height: 80,
                             decoration: BoxDecoration(
-                              color: Color(0xff5a595b),
+                              color: const Color(0xff5a595b),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Row(
@@ -155,13 +156,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                         "Do you want to reset the counter ?"),
                                     actions: [
                                       TextButton(
-                                        child: Text("Cancel"),
+                                        child: const Text("Cancel"),
                                         onPressed: () {
                                           Navigator.pop(context);
                                         },
                                       ),
                                       TextButton(
-                                        child: Text("OK"),
+                                        child: const Text("OK"),
                                         onPressed: () {
                                           setState(() {
                                             _counter = 0;
@@ -176,20 +177,18 @@ class _HomeScreenState extends State<HomeScreen> {
                             height: 80,
                             decoration: BoxDecoration(
                               // color: Colors.black87,
-                              color: Color(0xff5a595b),
+                              color: const Color(0xff5a595b),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                  child: const Text(
-                                    "Reset",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                              children: const [
+                                Text(
+                                  "Reset",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 )
                               ],
@@ -210,7 +209,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Container(
                       height: 120,
                       decoration: BoxDecoration(
-                        color: Color(0xff5a595b),
+                        color: const Color(0xff5a595b),
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       child: Row(
